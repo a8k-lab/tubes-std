@@ -1,0 +1,46 @@
+# Ignore object files, shared libraries, and executables
+*.o
+*.obj
+*.so
+*.exe
+*.dll
+
+# Ignore dependency files
+*.d
+
+# Ignore compiled static libraries
+*.lib
+*.a
+
+# Ignore precompiled headers
+*.gch
+*.pch
+
+# Ignore debug and release directories
+Debug/
+Release/
+
+# Ignore build directories
+build/
+cmake-build-*/
+
+# Ignore IDE specific files
+*.code-workspace
+.vscode/
+.idea/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+
+# Ignore generated documentation
+docs/
+
+# Ignore other temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
