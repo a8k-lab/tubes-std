@@ -1,6 +1,0 @@
-#ifndef PASIEN_H_INCLUDED
-#define PASIEN_H_INCLUDED
-
-
-
-#endif // PASIEN_H_INCLUDED
