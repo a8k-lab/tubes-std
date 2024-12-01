@@ -1,0 +1,25 @@
+# Fitur-fitur Program
+
+- List parent (Dokter)
+  - Menambah dokter
+  - Menghapus dokter
+  - Mencari dokter
+  - Menampilkan semua dokter
+  - Menampilkan data dokter yang menangani pasien tertentu
+  - Menampilkan data dokter tertentu beserta pasien yang ditanganinya. Ditampilkan beserta dengan data perawatannya
+  - Menampilkan total pasien yang ditangani oleh dokter tertentu
+  - Menampilkan total dokter yang tidak memiliki pasien
+- List relasi (Perawatan)
+  - Menambah data perawatan
+  - Menghapus data perawatan
+  - Mengedit dokter atau pasien dari data perawatan
+- List child (Pasien)
+  - Menambah pasien
+  - Menghapus pasien
+  - Mencari pasien
+  - Menampilkan semua pasien
+  - Menampilkan data pasien yang ditangani oleh dokter tertentu
+  - Menampilkan data pasien tertentu beserta dokter yang menanganinya. Ditampilkan beserta dengan data perawatannya
+  - Menampilkan total dokter yang menangani pasien tertentu
+  - Menampilkan total pasien yang belum ditangani dokter
+- Menemukan apakah data dokter dan pasien tertentu memiliki relasi
