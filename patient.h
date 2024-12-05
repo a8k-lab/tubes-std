@@ -1,10 +1,17 @@
 #ifndef PATIENT_H_INCLUDED
 #define PATIENT_H_INCLUDED
+
 #include <iostream>
+#include <string>
 #include "treatment.h"
+
+using namespace std;
 
 typedef struct Patient patientInfo;
 typedef struct ElmPatient *patientAddress;
+
+#define nil NULL
+
 
 struct Patient {
   string info;
