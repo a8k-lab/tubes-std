@@ -29,8 +29,6 @@ struct ListPatient {
   patientAddress last;
 };
 
-// TODO: required procedures and functions below here
-
 // IS. -
 // FS. Terbentuk sebuah list di mana, first dari L bernilai NIL.
 
