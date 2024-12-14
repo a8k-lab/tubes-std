@@ -31,6 +31,9 @@ void insertTreatmentLast(ListTreatment &L, treatmentAddress P);
 // FS. P berisi alamat elmTreatment yang terakhir, elmTreatment yang ditunjuk oleh P dihapus dari list
 void deleteTreatmentLast(ListTreatment &L, treatmentAddress &P);
 
+// Fungsi mengembalikan True apabila list kosong, atau False bila sebaliknya.
+bool isTreatmentEmpty(ListTreatment L);
+
 // TODO: edit dokter atau pasien dari data perawatan
 
 #endif // TREATMENT_H_INCLUDED
