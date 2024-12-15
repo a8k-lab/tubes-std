@@ -1,14 +1,12 @@
 #ifndef PATIENT_H_INCLUDED
 #define PATIENT_H_INCLUDED
-
-#include <iostream>
 #include "treatment.h"
 
 typedef struct Patient patientInfo;
 typedef struct ElmPatient *patientAddress;
 
 struct Patient {
-  string info;
+  string name;
   string gender;
   int age;
 };

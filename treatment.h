@@ -1,16 +1,21 @@
 #ifndef TREATMENT_H_INCLUDED
 #define TREATMENT_H_INCLUDED
-#include <iostream>
+#include "doctor.h"
+#include "patient.h"
 
 typedef struct Treatment treatmentInfo;
 typedef struct ElmTreatment *treatmentAddress;
 
 struct Treatment {
-  string info;
+  string name;
+  float price;
+  int duration;
 };
 struct ElmTreatment {
   treatmentInfo info;
   treatmentAddress next;
+  doctorAddress doctor;
+  patientAddress patient;
 };
 struct ListTreatment {
   treatmentAddress first;

@@ -8,6 +8,7 @@ using namespace std;
 #define next(P) P->next
 #define prev(P) P->prev
 #define info(P) P->info
+#define relation(P) P->relation
 #define nil NULL
 
 #endif // BASE_H_INCLUDED
