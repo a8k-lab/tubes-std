@@ -1,7 +1,7 @@
 #ifndef PATIENT_H
 #define PATIENT_H
 
-#include <string>
+#include "alias.h"
 #include "treatment.h"
 
 typedef struct Patient patientInfo;

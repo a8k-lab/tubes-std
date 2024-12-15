@@ -1,7 +1,7 @@
 #ifndef TREATMENT_H
 #define TREATMENT_H
 
-#include <string>
+#include "alias.h"
 #include "doctor.h"
 #include "patient.h"
 

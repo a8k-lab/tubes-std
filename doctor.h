@@ -1,7 +1,6 @@
 #ifndef DOCTOR_H
 #define DOCTOR_H
 
-#include <string>
 #include "alias.h"
 #include "treatment.h"
 

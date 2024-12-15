@@ -1,8 +1,12 @@
 #ifndef ALIAS_H
 #define ALIAS_H
 
-using namespace std;
 #include <iostream>
+#include <string>
+using std::cout;
+using std::cin;
+using std::endl;
+using std::string;
 #define first(L) L.first
 #define last(L) L.last
 #define next(P) P->next
