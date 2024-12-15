@@ -48,3 +48,18 @@ void deleteTreatmentLast(ListTreatment &L, treatmentAddress &P) {
 bool isTreatmentEmpty(ListTreatment L) {
     return first(L) == nil;
 }
+
+bool isRelation(ListTreatment L, string doctorName, string patientName) {
+    treatmentAddress current = first(L);
+
+    while (current != nil) {
+        // Periksa apakah nama dokter dan pasien sesuai pada treatment
+        if (info(current->doctor).name == doctorName &&
+            info(current->patient).name == patientName) {
+            return true;  // Dokter dan pasien memiliki relasi
+        }
+        current = next(current);
+    }
+
+    return false;  // Tidak ada relasi ditemukan
+}

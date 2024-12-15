@@ -41,6 +41,7 @@ void deleteTreatmentLast(ListTreatment &L, treatmentAddress &P);
 // Fungsi mengembalikan True apabila list kosong, atau False bila sebaliknya.
 bool isTreatmentEmpty(ListTreatment L);
 
-// TODO: edit dokter atau pasien dari data perawatan
+// Fungsi untuk memeriksa apakah dokter dan pasien memiliki relasi
+bool isRelation(ListTreatment L, string doctorName, string patientName);
 
 #endif //TREATMENT_H

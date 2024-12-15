@@ -47,9 +47,12 @@ void printListDoctor(ListDoctor L);
 // FS. Menampilkan elmDoctor yang menangani pasien tertentu.
 void printListDoctorByPatient(ListDoctor L, string patient);
 
-// TODO
-void printPatientTotalByDoctor(ListDoctor L, string doctor);
+// IS. Terdefinisi sebuah list doctor L
+// FS. Menampilkan total pasien yang ditangani oleh dokter tertentu.
+void printTotalPatientByDoctor(ListDoctor L, string doctor);
 
-void printDoctorWithNoPatient(ListDoctor L);
+// IS. Terdefinisi sebuah list doctor L
+// FS. Menampilkan list doctor yang tidak memiliki pasien.
+void printListDoctorNoPatient(ListDoctor L);
 
 #endif //DOCTOR_H

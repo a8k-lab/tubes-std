@@ -25,15 +25,13 @@ struct ListPatient {
 
 // IS. -
 // FS. Terbentuk sebuah list di mana, first dari L bernilai NIL.
-
-void createdNewListPatient(ListPatient &L);
+void createNewListPatient(ListPatient &L);
 
 // Fungsi mengembalikan elemen patient berdasarkan parameter fungsi, yaitu 'Elm'.
 patientAddress allocatePatient(patientInfo Elm);
 
 // IS. Terdefinisi pointer P berisi alamat elmPatient, dan seuah list L ( L mungkin kosong).
 // FS. elmPatient yang ditunjuk oleh P ditambahkan ke dalam list sebagai elemen terakhir.
-
 void insertPatientLast(ListPatient &L, patientAddress P);
 
 // IS. Terdefinisi sebuah list L (L tidak kosong dan mungkin berisi satu elemen).
@@ -58,10 +56,12 @@ void printListPatientByDoctor(ListPatient L, string doctor);
 // FS. Menampilkan detail pasien tertentu beserta dokter yang menanganinya.
 void printPatientDetails(ListPatient L, string patientInfo);
 
-// Fungsi untuk menghitung total dokter yang menangani pasien tertentu
-int countDoctorsForPatient(ListPatient L, string patientInfo);
+// IS. Terdefinisi sebuah list patient L
+// FS. Menampilkan total dokter yang menangani pasien tertentu.
+void printTotalDoctorByPatient(ListPatient L, string patientInfo);
 
-// Fungsi untuk menghitung total pasien yang belum ditangani dokter
-int countPatientNoDoctor(ListPatient L);
+// IS. Terdefinisi sebuah list patient L
+// FS. Menampilkan total pasien yang belum ditangani dokter.
+void printTotalPatientNoDoctor(ListPatient L);
 
 #endif //PATIENT_H

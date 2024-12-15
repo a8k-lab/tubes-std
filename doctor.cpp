@@ -58,3 +58,59 @@ void printListDoctor(ListDoctor L) {
         current = next(current);
     }
 }
+
+void printListDoctorByPatient(ListDoctor L, string patient) {
+    doctorAddress current = first(L);
+
+    while (current != nil) {
+        if (relation(current) != nil) {
+            if (info(relation(current)).name == patient) {
+                cout << info(current).name << " " << info(current).speciality << " " << info(current).age << endl;
+            }
+        }
+        current = next(current);
+    }
+}
+
+void printTotalPatientByDoctor(ListDoctor L, string doctorName) {
+    doctorAddress currentDoctor = first(L);
+    int totalPatients = 0;
+
+    while (currentDoctor != nil) {
+        // Periksa apakah nama dokter sesuai
+        if (info(currentDoctor).name == doctorName) {
+            // Telusuri daftar perawatan
+            treatmentAddress currentTreatment = relation(currentDoctor);
+            
+            // Hitung pasien yang berbeda
+            while (currentTreatment != nil) {
+                totalPatients++;
+                currentTreatment = next(currentTreatment);
+            }
+            
+            // Tampilkan total pasien yang ditangani dokter
+            cout << "Total pasien yang ditangani Dr. " << doctorName << ": " << totalPatients << endl;
+            return;
+        }
+        
+        currentDoctor = next(currentDoctor);
+    }
+
+    // Jika dokter tidak ditemukan
+    cout << "Dokter " << doctorName << " tidak ditemukan." << endl;
+}
+
+void printListDoctorNoPatient(ListDoctor L) {
+    doctorAddress currentDoctor = first(L);
+
+    while (currentDoctor != nil) {
+        // Periksa apakah dokter tidak memiliki relasi perawatan (pasien)
+        if (relation(currentDoctor) == nil) {
+            cout << info(currentDoctor).name << " " 
+                << info(currentDoctor).speciality << " " 
+                << info(currentDoctor).age << endl;
+        }
+        
+        currentDoctor = next(currentDoctor);
+    }
+}
