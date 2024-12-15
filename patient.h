@@ -16,7 +16,7 @@ void insertPatientLast(ListPatient &L, patientAddress P);
 
 // IS. Terdefinisi sebuah list L (L tidak kosong dan mungkin berisi satu elemen).
 // FS. P berisi alamat elmPatient yang terakhir, elmPatient yang ditunjuk oleh P dihapus dari list
-void deletePatientLast(ListPatient &L, string patientName);
+void deletePatientLast(ListPatient &L, patientAddress &P);
 
 // Fungsi untuk mencari pasien berdasarkan nama
 patientAddress findPatient(ListPatient &L, string patientName);

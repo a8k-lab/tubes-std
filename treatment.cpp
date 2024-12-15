@@ -5,10 +5,10 @@ void createNewListTreatment(ListTreatment &L) {
     first(L) = nil;
 }
 
-treatmentAddress allocateTreatment(treatmentInfo Elm, treatmentAddress next) {
+treatmentAddress allocateTreatment(treatmentInfo Elm) {
     treatmentAddress newElm = new ElmTreatment;
     info(newElm) = Elm;
-    next(newElm) = next;
+    next(newElm) = nil;
     return newElm;
 }
 
