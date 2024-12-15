@@ -1,0 +1,1 @@
+g++ main.cpp base.h doctor.cpp treatment.cpp patient.cpp menu.cpp -o main && ./main
