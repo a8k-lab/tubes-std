@@ -1,6 +1,8 @@
-#ifndef DOCTOR_H_INCLUDED
-#define DOCTOR_H_INCLUDED
-#include <iostream>
+#ifndef DOCTOR_H
+#define DOCTOR_H
+
+#include <string>
+#include "alias.h"
 #include "treatment.h"
 
 typedef struct Doctor doctorInfo;
@@ -51,4 +53,4 @@ void printPatientTotalByDoctor(ListDoctor L, string doctor);
 
 void printDoctorWithNoPatient(ListDoctor L);
 
-#endif // DOCTOR_H_INCLUDED
+#endif //DOCTOR_H

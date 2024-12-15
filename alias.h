@@ -1,7 +1,7 @@
-#ifndef BASE_H_INCLUDED
-#define BASE_H_INCLUDED
-using namespace std;
+#ifndef ALIAS_H
+#define ALIAS_H
 
+using namespace std;
 #include <iostream>
 #define first(L) L.first
 #define last(L) L.last
@@ -11,4 +11,4 @@ using namespace std;
 #define relation(P) P->relation
 #define nil NULL
 
-#endif // BASE_H_INCLUDED
+#endif //ALIAS_H

@@ -1,5 +1,7 @@
-#ifndef TREATMENT_H_INCLUDED
-#define TREATMENT_H_INCLUDED
+#ifndef TREATMENT_H
+#define TREATMENT_H
+
+#include <string>
 #include "doctor.h"
 #include "patient.h"
 
@@ -41,4 +43,4 @@ bool isTreatmentEmpty(ListTreatment L);
 
 // TODO: edit dokter atau pasien dari data perawatan
 
-#endif // TREATMENT_H_INCLUDED
+#endif //TREATMENT_H

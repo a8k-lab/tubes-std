@@ -1,3 +1,4 @@
+#include "alias.h"
 #include "patient.h"
 
 // Fungsi untuk membuat list pasien baru
@@ -21,12 +22,12 @@ patientAddress allocatePatient(patientInfo Elm) {
 // Fungsi untuk menambahkan pasien ke akhir list
 void insertPatientLast(ListPatient &L, patientAddress P) {
     if (isPatientEmpty(L)) { // Cek jika list kosong
-        first(L) = P; // Jika kosong, elemen pertama adalah P
-        last(L) = P; // Elemen terakhir juga P
+        first(L) = p;
+        last(L) = p;
     } else {
-        last(next(L)) = P; // Tambahkan P di belakang
-        prev(P) = last(L); // Set prev P ke last
-        last(L) = P; // Update last ke P
+        next(last(L)) = p;
+        prev(p) = last(L);
+        last(L) = p;
     }
 }
 
@@ -80,7 +81,7 @@ patientAddress findPatient(ListPatient &L, string patientInfo) {
         }
         current = next(current); // Pindah ke pasien berikutnya
     }
-    
+
     // Jika pasien tidak ditemukan
     cout << "Pasien " << patientInfo << " tidak ditemukan." << endl;
     return nil; // Kembalikan nil jika tidak ditemukan

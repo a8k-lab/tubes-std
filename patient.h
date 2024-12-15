@@ -1,5 +1,7 @@
-#ifndef PATIENT_H_INCLUDED
-#define PATIENT_H_INCLUDED
+#ifndef PATIENT_H
+#define PATIENT_H
+
+#include <string>
 #include "treatment.h"
 
 typedef struct Patient patientInfo;
@@ -62,4 +64,4 @@ int countDoctorsForPatient(ListPatient L, string patientInfo);
 // Fungsi untuk menghitung total pasien yang belum ditangani dokter
 int countPatientNoDoctor(ListPatient L);
 
-#endif // PATIENT_H_INCLUDED
+#endif //PATIENT_H
