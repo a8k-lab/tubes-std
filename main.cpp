@@ -5,6 +5,10 @@
 #include "base.h"
 
 int main() {
+    int mainMenu, doctorMenu, treatmentMenu, patientMenu;
+    doctorAddress elmDoctor;
+    treatmentAddress elmTreatment;
+    patientAddress elmPatient;
     ListDoctor doctorList;
     ListTreatment treatmentList;
     ListPatient patientList;
@@ -13,17 +17,20 @@ int main() {
     createNewListTreatment(treatmentList);
     createNewListPatient(patientList);
 
-    int mainMenu = selectMenu();
+    mainMenu = selectMenu();
     while (mainMenu != 0) {
         switch (mainMenu) {
             case 1:
-                selectDoctorMenu();
+                doctorMenu = selectDoctorMenu();
+                // TODO
                 break;
             case 2:
-                selectTreatmentMenu();
+                treatmentMenu = selectTreatmentMenu();
+                // TODO
                 break;
             case 3:
-                selectPatientMenu();
+                patientMenu = selectPatientMenu();
+                // TODO
                 break;
             case 0:
                 break;

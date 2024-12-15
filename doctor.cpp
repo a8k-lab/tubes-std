@@ -46,6 +46,19 @@ void deleteDoctorLast(ListDoctor &L, doctorAddress &P) {
     }
 }
 
+doctorAddress findDoctor(ListDoctor &L, string doctorName) {
+    doctorAddress current = first(L);
+    
+    while (current != nil) {
+        if (info(current).name == doctorName) {
+            return current;
+        }
+        current = next(current);
+    }
+    
+    return nil;
+}
+
 bool isDoctorEmpty(ListDoctor L) {
     return first(L) == nil;
 }
@@ -59,12 +72,12 @@ void printListDoctor(ListDoctor L) {
     }
 }
 
-void printListDoctorByPatient(ListDoctor L, string patient) {
+void printListDoctorByPatient(ListDoctor L, string patientName) {
     doctorAddress current = first(L);
 
     while (current != nil) {
         if (relation(current) != nil) {
-            if (info(relation(current)).name == patient) {
+            if (info(relation(current)).name == patientName) {
                 cout << info(current).name << " " << info(current).speciality << " " << info(current).age << endl;
             }
         }

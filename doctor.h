@@ -18,6 +18,9 @@ void insertDoctorLast(ListDoctor &L, doctorAddress P);
 // FS. P berisi alamat elmDoctor yang terakhir, elmDoctor yang ditunjuk oleh P dihapus dari list
 void deleteDoctorLast(ListDoctor &L, doctorAddress &P);
 
+// Fungsi untuk mencari dokter berdasarkan nama
+doctorAddress findDoctor(ListDoctor &L, string doctorName);
+
 // Fungsi mengembalikan True apabila list kosong, atau False bila sebaliknya.
 bool isDoctorEmpty(ListDoctor L);
 
@@ -27,11 +30,11 @@ void printListDoctor(ListDoctor L);
 
 // IS. Terdefinisi sebuah list doctor L
 // FS. Menampilkan elmDoctor yang menangani pasien tertentu.
-void printListDoctorByPatient(ListDoctor L, string patient);
+void printListDoctorByPatient(ListDoctor L, string patientName);
 
 // IS. Terdefinisi sebuah list doctor L
 // FS. Menampilkan total pasien yang ditangani oleh dokter tertentu.
-void printTotalPatientByDoctor(ListDoctor L, string doctor);
+void printTotalPatientByDoctor(ListDoctor L, string doctorName);
 
 // IS. Terdefinisi sebuah list doctor L
 // FS. Menampilkan list doctor yang tidak memiliki pasien.

@@ -16,10 +16,10 @@ void insertPatientLast(ListPatient &L, patientAddress P);
 
 // IS. Terdefinisi sebuah list L (L tidak kosong dan mungkin berisi satu elemen).
 // FS. P berisi alamat elmPatient yang terakhir, elmPatient yang ditunjuk oleh P dihapus dari list
-void deletePatient(ListPatient &L, string patientInfo);
+void deletePatientLast(ListPatient &L, string patientName);
 
-// Fungsi untuk mencari pasien berdasarkan info
-patientAddress findPatient(ListPatient &L, string patientInfo);
+// Fungsi untuk mencari pasien berdasarkan nama
+patientAddress findPatient(ListPatient &L, string patientName);
 
 // Fungsi mengembalikan True apabila list kosong, atau False bila sebaliknya.
 bool isPatientEmpty(ListPatient L);
@@ -34,11 +34,11 @@ void printListPatientByDoctor(ListPatient L, string doctor);
 
 // IS. Terdefinisi sebuah list patient L
 // FS. Menampilkan detail pasien tertentu beserta dokter yang menanganinya.
-void printPatientDetails(ListPatient L, string patientInfo);
+void printPatientDetails(ListPatient L, string patientName);
 
 // IS. Terdefinisi sebuah list patient L
 // FS. Menampilkan total dokter yang menangani pasien tertentu.
-void printTotalDoctorByPatient(ListPatient L, string patientInfo);
+void printTotalDoctorByPatient(ListPatient L, string patientName);
 
 // IS. Terdefinisi sebuah list patient L
 // FS. Menampilkan total pasien yang belum ditangani dokter.

@@ -26,42 +26,23 @@ void insertPatientLast(ListPatient &L, patientAddress P) {
     }
 }
 
-void deletePatient(ListPatient &L, string patientInfo) {
+void deletePatientLast(ListPatient &L, patientAddress &P) {
     if (isPatientEmpty(L)) {
         cout << "List pasien kosong, tidak ada yang bisa dihapus." << endl;
         return;
     }
-
-    patientAddress current = first(L); // Mulai dari pasien pertama
-
-    if (current == nil) {
-        cout << "Pasien tidak ditemukan." << endl;
-        return;
-    }
-    
-    // Jika hanya satu elemen
-    if (first(L) == last(L)) {
+    if (next(first(L)) == nil){
+        P = first(L);
         first(L) = nil;
-        last(L) = nil;
-    } 
-    // Jika pasien di awal list
-    else if (current == first(L)) {
-        first(L) = next(current);
-        prev(first(L)) = nil;
-    } 
-    // Jika pasien di akhir list
-    else if (current == last(L)) {
-        last(L) = prev(current);
-        next(last(L)) = nil;
-    } 
-    // Jika pasien di tengah list
-    else {
-        next(prev(current)) = next(current);
-        prev(next(current)) = prev(current);
+    } else {
+        patientAddress q;
+        P = first(L);
+        while (next(P) != nil){
+            q = P;
+            P = next(P);
+        }
+        next(q) = nil;
     }
-    
-    // Hapus memori
-    delete current;
 }
 
 patientAddress findPatient(ListPatient &L, string patientInfo) {
@@ -92,14 +73,14 @@ void printListPatient(ListPatient L) {
     }
 }
 
-void printListPatientByDoctor(ListPatient L, string doctor) {
+void printListPatientByDoctor(ListPatient L, string doctorName) {
     patientAddress current = first(L);
     
     while (current != nil) {
         // Cek apakah pasien memiliki relasi treatment
         if (relation(current) != nil) {
             // Cek apakah nama dokter pada treatment sesuai
-            if (info(relation(current)->doctor).name == doctor) {
+            if (info(relation(current)->doctor).name == doctorName) {
                 cout << info(current).name << " " 
                     << info(current).gender << " " 
                     << info(current).age << endl;
@@ -109,8 +90,8 @@ void printListPatientByDoctor(ListPatient L, string doctor) {
     }
 }
 
-void printPatientDetails(ListPatient L, string patientInfo) {
-    patientAddress patient = findPatient(L, patientInfo);
+void printPatientDetails(ListPatient L, string patientName) {
+    patientAddress patient = findPatient(L, patientName);
     
     if (patient == nil) {
         cout << "Pasien tidak ditemukan." << endl;
@@ -134,8 +115,8 @@ void printPatientDetails(ListPatient L, string patientInfo) {
     }
 }
 
-void printTotalDoctorByPatient(ListPatient L, string patientInfo) {
-    patientAddress patient = findPatient(L, patientInfo);
+void printTotalDoctorByPatient(ListPatient L, string patientName) {
+    patientAddress patient = findPatient(L, patientName);
     
     if (patient == nil) {
         cout << "Pasien tidak ditemukan." << endl;
@@ -150,7 +131,7 @@ void printTotalDoctorByPatient(ListPatient L, string patientInfo) {
         treatment = next(treatment);
     }
     
-    cout << "Total dokter yang menangani pasien " << patientInfo << ": " << totalDoctors << endl;
+    cout << "Total dokter yang menangani pasien " << patientName << ": " << totalDoctors << endl;
 }
 
 void printTotalPatientNoDoctor(ListPatient L) {
