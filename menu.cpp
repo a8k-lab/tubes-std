@@ -1,7 +1,13 @@
 #include "menu.h"
 
 int selectMenu() {
-    cout << "====== MENU =======" << endl;
+    cout << "==========================================" << endl;
+    cout << "Nama Kelompok : 2M" << endl;
+    cout << "Nama Anggota: " << endl;
+    cout << "1. Putri Galuh Mandarizka (103042310062)" << endl;
+    cout << "2. Abdul Malik (103042310065)" << endl;
+    cout << "==========================================" << endl;
+    cout << "================== MENU ==================" << endl;
     cout << "1. Menu Dokter" << endl;
     cout << "2. Menu Perawatan" << endl;
     cout << "3. Menu Pasien" << endl;
@@ -14,7 +20,7 @@ int selectMenu() {
 }
 
 int selectDoctorMenu() (
-    cout << "====== MENU DOKTER =======" << endl;
+    cout << "============= MENU DOKTER ===============" << endl;
     cout << "1. Tambah Dokter" << endl;
     cout << "2. Hapus Dokter" << endl;
     cout << "3. Mencari Dokter" << endl;
@@ -31,7 +37,7 @@ int selectDoctorMenu() (
     return input
 )
 int selectTreatmentMenu() (
-    cout << "====== MENU PERAWATAN =======" << endl;
+    cout << "============ MENU PERAWATAN ===========" << endl;
     cout << "1. Tambah Data Perawatan" << endl;
     cout << "2. Hapus Data Perawatan" << endl;
     cout << "3. Edit Dokter atau Pasien dari Data Perawatan" << endl;
@@ -43,7 +49,7 @@ int selectTreatmentMenu() (
     return input
 )
 int selectPatientMenu(); {
-    cout << "====== MENU PASIEN =======" << endl;
+    cout << "============= MENU PASIEN =============" << endl;
     cout << "1. Tambah Pasien" << endl;
     cout << "2. Menghapus Data Pasien" << endl;
     cout << "3. Cari Pasien" << endl;
