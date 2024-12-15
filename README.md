@@ -37,6 +37,7 @@ Terdapat Rumah Sakit yang ingin menyimpan data pasien, dokter, dan juga perawata
     - Menambah data perawatan
     - Menghapus data perawatan
     - Mengedit dokter atau pasien dari data perawatan
+    - Menemukan apakah data dokter dan pasien tertentu memiliki relasi
 - List child (Pasien)
     - Menambah pasien
     - Menghapus pasien
@@ -46,7 +47,6 @@ Terdapat Rumah Sakit yang ingin menyimpan data pasien, dokter, dan juga perawata
     - Menampilkan data pasien tertentu beserta dokter yang menanganinya. Ditampilkan beserta dengan data perawatannya
     - Menampilkan total dokter yang menangani pasien tertentu
     - Menampilkan total pasien yang belum ditangani dokter
-- Menemukan apakah data dokter dan pasien tertentu memiliki relasi
 
 # 🚫 Kendala
 
@@ -62,10 +62,11 @@ Semua yang berkaitan dengan:
 
 - List Parent (Data Dokter)
 - List Relasi (Data Perawatan)
-- Program utama
+- Program utama (`main.cpp`)
 
 ## Putri Galuh Mandarizka
 
 Semua yang berkaitan dengan:
 
 - List Child (Data Pasien)
+- Tampilan list menu program
