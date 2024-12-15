@@ -1,27 +1,7 @@
 #ifndef TREATMENT_H
 #define TREATMENT_H
 
-#include "alias.h"
-#include "doctor.h"
-#include "patient.h"
-
-typedef struct Treatment treatmentInfo;
-typedef struct ElmTreatment *treatmentAddress;
-
-struct Treatment {
-  string name;
-  float price;
-  int duration;
-};
-struct ElmTreatment {
-  treatmentInfo info;
-  treatmentAddress next;
-  doctorAddress doctor;
-  patientAddress patient;
-};
-struct ListTreatment {
-  treatmentAddress first;
-};
+#include "base.h"
 
 // IS. –
 // FS. Terbentuk sebuah list di mana, first dari L bernilai NIL.

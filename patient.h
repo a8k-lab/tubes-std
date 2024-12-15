@@ -1,27 +1,7 @@
 #ifndef PATIENT_H
 #define PATIENT_H
 
-#include "alias.h"
-#include "treatment.h"
-
-typedef struct Patient patientInfo;
-typedef struct ElmPatient *patientAddress;
-
-struct Patient {
-  string name;
-  string gender;
-  int age;
-};
-struct ElmPatient {
-  patientInfo info;
-  patientAddress prev;
-  patientAddress next;
-  treatmentAddress relation;
-};
-struct ListPatient {
-  patientAddress first;
-  patientAddress last;
-};
+#include "base.h"
 
 // IS. -
 // FS. Terbentuk sebuah list di mana, first dari L bernilai NIL.

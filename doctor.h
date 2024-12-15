@@ -1,25 +1,7 @@
 #ifndef DOCTOR_H
 #define DOCTOR_H
 
-#include "alias.h"
-#include "treatment.h"
-
-typedef struct Doctor doctorInfo;
-typedef struct ElmDoctor *doctorAddress;
-
-struct Doctor {
-  string name;
-  string speciality;
-  int age;
-};
-struct ElmDoctor {
-  doctorInfo info;
-  doctorAddress next;
-  treatmentAddress relation;
-};
-struct ListDoctor {
-  doctorAddress first;
-};
+#include "base.h"
 
 // IS. –
 // FS. Terbentuk sebuah list di mana, first dari L bernilai NIL.
