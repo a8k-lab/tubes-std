@@ -1,13 +1,21 @@
 #include "menu.h"
 
+void clearScreen() {
+    #ifdef _WIN32
+        system("cls");
+    #else
+        system("clear");
+    #endif
+}
+
 int selectMenu() {
+    clearScreen();
     cout << "==========================================" << endl;
     cout << "Tugas Besar Struktur Data" << endl;
     cout << "Kelompok 2M" << endl;
     cout << "Anggota: " << endl;
-    cout << "1. Putri Galuh Mandarizka (103042310062)" << endl;
-    cout << "2. Abdul Malik (103042310065)" << endl;
-    cout << "==========================================" << endl;
+    cout << "• Putri Galuh Mandarizka (103042310062)" << endl;
+    cout << "• Abdul Malik (103042310065)" << endl;
     cout << "================== MENU ==================" << endl;
     cout << "1. Menu Dokter" << endl;
     cout << "2. Menu Perawatan" << endl;
@@ -21,6 +29,7 @@ int selectMenu() {
 }
 
 int selectDoctorMenu() {
+    clearScreen();
     cout << "============= MENU DOKTER ===============" << endl;
     cout << "1. Tambah Dokter" << endl;
     cout << "2. Hapus Dokter" << endl;
@@ -39,6 +48,7 @@ int selectDoctorMenu() {
 }
 
 int selectTreatmentMenu() {
+    clearScreen();
     cout << "============ MENU PERAWATAN ===========" << endl;
     cout << "1. Tambah Perawatan" << endl;
     cout << "2. Hapus Perawatan" << endl;
@@ -53,6 +63,7 @@ int selectTreatmentMenu() {
 }
 
 int selectPatientMenu() {
+    clearScreen();
     cout << "============= MENU PASIEN =============" << endl;
     cout << "1. Tambah Pasien" << endl;
     cout << "2. Hapus Pasien" << endl;

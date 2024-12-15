@@ -6,6 +6,7 @@ using std::cout;
 using std::cin;
 using std::endl;
 
+void clearScreen();
 int selectMenu();
 int selectDoctorMenu();
 int selectTreatmentMenu();
