@@ -1,7 +1,7 @@
 #include "base.h"
 #include "treatment.h"
 
-void createListTreatment(ListTreatment &L) {
+void createNewListTreatment(ListTreatment &L) {
     first(L) = nil;
 }
 
